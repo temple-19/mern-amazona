@@ -13,6 +13,7 @@ import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utilis';
 import { toast } from 'react-toastify';
+import Button from 'react-bootstrap/Button';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -241,11 +242,21 @@ export default function OrderScreen() {
                       <LoadingBox />
                     ) : (
                       <div>
-                        <PayPalButtons
-                          createOrder={createOrder}
-                          onApprove={onApprove}
-                          onError={onError}
-                        ></PayPalButtons>
+                        {order.paymentMethod === 'PayPal' ? (
+                          <PayPalButtons
+                            createOrder={createOrder}
+                            onApprove={onApprove}
+                            onError={onError}
+                          ></PayPalButtons>
+                        ) : (
+                          <Button
+                            onClick={() => {
+                              navigate(`/pay/${order._id}`);
+                            }}
+                          >
+                            Pay with Card
+                          </Button>
+                        )}
                       </div>
                     )}
                     {loadingPay && <LoadingBox></LoadingBox>}

@@ -1,19 +1,8 @@
-# Mern amazona
+backend hosted on a free server, you may experince a downtime of 30-45 seconds
 
-#LESSONS
-1.Introduction
-2.Install Tools
-3.Create React App
-4.Create Git Repository
-5.List Products
-.create products array
-.add product images
-.render products
-.style products
+https://melodic-kangaroo-1ec924.netlify.app/
 
----
+test cards using bambora - using any expiry month or year 12/22
+- 4030000010001234 cvd-123
+- 5100000010001004 cvd-123
 
-6. Add page routing
-   . npm i react-router-dom
-   . create route for home screen
-   . create router for product screen

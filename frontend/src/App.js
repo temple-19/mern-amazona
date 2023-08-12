@@ -218,7 +218,17 @@ function App() {
           </Container>
         </main>
         <footer>
-          <div className="text-center">All rights reserved</div>
+          <div className="text-center">
+        <a
+          href="https://templecodes.netlify.app/"
+          rel="noreferrer"
+          style={{
+            textDecoration: 'none',
+          }}
+        >
+          Created by Temple
+        </a>
+        </div>
         </footer>
       </div>
     </BrowserRouter>
